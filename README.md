@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ☯️ Open LiuYao (六爻排盘系统)
 
-## Getting Started
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.0-38bdf8)](https://tailwindcss.com/)
 
-First, run the development server:
+> 一个基于现代 Web 技术栈（Next.js + TypeScript）构建的数字化中国传统六爻占卜平台。
+> A modern, digital implementation of the traditional Chinese Six Yao divination system.
+
+
+## ✨ 特性 (Features)
+
+- 🪙 **数字化起卦**: 模拟铜钱起卦逻辑，支持手动排盘。
+- 📖 **六十四卦详解**: 完整的卦辞、象辞、运势偈语及白话详解。
+- 🎨 **现代化 UI**: 结合 Tailwind CSS 打造的古风与现代极简主义融合的界面。
+- 📝 **Markdown 渲染**: 优化的排版引擎，清晰展示卦象深度解析。
+- 📱 **响应式设计**: 完美适配桌面端与移动端。
+- 🔍 **SEO 友好**: 基于 Next.js SSR 生成的静态字典页面。
+
+## 🛠️ 技术栈 (Tech Stack)
+
+- **框架**: [Next.js 15](https://nextjs.org/) (App Router)
+- **语言**: TypeScript
+- **样式**: Tailwind CSS + @tailwindcss/typography
+- **渲染**: React Markdown (用于富文本解析)
+- **部署**: Vercel (推荐)
+
+## 🚀 快速开始 (Getting Started)
+
+### 环境要求
+- Node.js >= 18.17.0
+- npm / yarn / pnpm
+
+### 安装
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# 克隆项目
+git clone [https://github.com/ares0x/open-liuyao.git](https://github.com/ares0x/open-liuyao.git)
+
+# 进入目录
+cd open-liuyao
+
+# 安装依赖
+npm install
+# 或
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 运行开发环境
+```bash
+npm run dev
+```
+打开浏览器访问 http://localhost:3000 即可看到效果。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📂 目录结构 (Project Structure)
+``` Markdown
+src/
+├── app/              # Next.js App Router 页面
+├── components/       # React 组件 (UI, 业务组件)
+│   └── ui/           # 通用 UI 组件 (如 MarkdownRenderer)
+├── lib/              # 核心逻辑与常量
+│   ├── constants.ts  # 六十四卦元数据
+│   ├── liuyao-core.ts# 起卦核心算法
+│   └── services/     # 数据访问层
+└── hooks/            # 自定义 Hooks
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🤝 贡献 (Contributing)
+欢迎提交 Issue 或 Pull Request！
 
-## Learn More
+``` Markdown
+Fork 本仓库
 
-To learn more about Next.js, take a look at the following resources:
+创建您的特性分支 (git checkout -b feature/AmazingFeature)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+提交您的修改 (git commit -m 'Add some AmazingFeature')
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+推送到分支 (git push origin feature/AmazingFeature)
 
-## Deploy on Vercel
+开启一个 Pull Request
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📜 开源协议 (License)
+本项目基于 MIT License 开源。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Made with ❤️ by [Ares & Gemini 3]

@@ -1,26 +1,91 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer base {
+    :root {
+        /* Base: Warm Rice Paper */
+        --background: 35 30% 96%;
+        /* Text: Deep Ink */
+        --foreground: 220 15% 10%;
+
+        /* Card: Slightly lighter paper */
+        --card: 35 30% 98%;
+        --card-foreground: 220 15% 10%;
+
+        /* Popover: Same as card */
+        --popover: 35 30% 98%;
+        --popover-foreground: 220 15% 10%;
+
+        /* Primary: Solid Ink Block (Actionable) */
+        --primary: 220 15% 10%;
+        --primary-foreground: 35 30% 96%;
+
+        /* Secondary: Washed Ink (Subtle) */
+        --secondary: 40 10% 90%;
+        --secondary-foreground: 220 15% 10%;
+
+        /* Muted: Aged Paper (Inactive) */
+        --muted: 40 10% 88%;
+        --muted-foreground: 220 10% 45%;
+
+        /* Accent: Subtle Brush Stroke (Hover/Select) */
+        --accent: 40 15% 90%;
+        --accent-foreground: 220 15% 10%;
+
+        /* Destructive: Cinnabar (Zhu Sha) - Traditional Seal Red */
+        --destructive: 0 65% 45%;
+        --destructive-foreground: 35 30% 96%;
+
+        /* Border: Light Ink Wash */
+        --border: 220 10% 85%;
+        --input: 220 10% 85%;
+        --ring: 220 15% 10%;
+
+        --radius: 0.5rem;
+    }
+
+    .dark {
+        /* Base: Deep Ink Stone */
+        --background: 220 15% 10%;
+        /* Text: Silver/Pale Paper */
+        --foreground: 35 20% 90%;
+
+        --card: 220 15% 12%;
+        --card-foreground: 35 20% 90%;
+
+        --popover: 220 15% 12%;
+        --popover-foreground: 35 20% 90%;
+
+        /* Primary: Silver/White (High contrast on dark) */
+        --primary: 35 20% 90%;
+        --primary-foreground: 220 15% 10%;
+
+        /* Secondary: Dark Grey Wash */
+        --secondary: 220 15% 20%;
+        --secondary-foreground: 35 20% 90%;
+
+        --muted: 220 15% 20%;
+        --muted-foreground: 220 10% 60%;
+
+        --accent: 220 15% 20%;
+        --accent-foreground: 35 20% 90%;
+
+        /* Destructive: Cinnabar remains, slightly brighter for visibility */
+        --destructive: 0 60% 50%;
+        --destructive-foreground: 35 20% 90%;
+
+        --border: 220 15% 20%;
+        --input: 220 15% 20%;
+        --ring: 35 20% 80%;
+    }
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
 }
