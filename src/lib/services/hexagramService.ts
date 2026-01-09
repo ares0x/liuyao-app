@@ -1,5 +1,5 @@
 // src/lib/services/hexagramService.ts
-import { HEXAGRAM_DATA } from "@/lib/cons"; // 原始数据
+import { HEXAGRAM_DATA } from "@/lib/guawen"; // 原始数据
 import type { HexagramData } from "@/lib/types/hexagram";
 
 /**

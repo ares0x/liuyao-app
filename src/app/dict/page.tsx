@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { HEXAGRAM_DATA } from "@/lib/cons";
+import { HEXAGRAM_DATA } from "@/lib/guawen";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

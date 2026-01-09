@@ -32,7 +32,7 @@ export function SiteHeader() {
                             asChild
                         >
                             <Link
-                                href="https://github.com/your-repo"
+                                href="https://github.com/ares0x/liuyao-app"
                                 target="_blank"
                                 rel="noreferrer"
                             >

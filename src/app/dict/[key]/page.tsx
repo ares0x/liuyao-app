@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { getHexagram } from "@/lib/services/hexagramService";
 import { MarkdownRenderer } from "@/components/ui/MarkdownRenderer";
-import { HEXAGRAM_DATA } from "@/lib/cons";
+import { HEXAGRAM_DATA } from "@/lib/guawen";
 import Link from "next/link";
 
 // 定义 Props 类型，注意 params 是 Promise
